@@ -20,7 +20,7 @@ class MessageResource(val messageService: MessageService) {
         return if (messages.isEmpty()) {
             with(ResponseEntity.noContent()) {
                 header("lastMessageId", lastMessageId)
-                build<List<MessageVM>>()
+                build()
             }
         } else {
             with(ResponseEntity.ok()) {

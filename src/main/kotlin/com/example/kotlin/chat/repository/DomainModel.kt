@@ -1,4 +1,4 @@
-package com.example.kotlin.chat.repository;
+package com.example.kotlin.chat.repository
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Table
@@ -14,5 +14,5 @@ data class Message(
     @Id var id: String? = null)
 
 enum class ContentType {
-    PLAIN
+    PLAIN, MARKDOWN
 }
