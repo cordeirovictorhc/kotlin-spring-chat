@@ -31,6 +31,9 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
+
+	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
+	runtimeOnly("com.h2database:h2")
 }
 
 tasks.withType<Test> {
@@ -40,6 +43,6 @@ tasks.withType<Test> {
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
-		jvmTarget = "11"
+		jvmTarget = "1.8"
 	}
 }
